@@ -1,0 +1,13 @@
+function initialise_variables
+%Written by Xing 29/05/14
+%Example of how variables get reset within loops and data may
+%unintentionally get carried from one loop to another.
+
+animalSessions=[20 15];%20 sessions for animal 1, 15 session for animal 2
+
+%Initialise the variable, 'result':
+%result=[];
+
+for animalIndex=1:2
+for i=1:animalSessions(animalIndex)
+    result=

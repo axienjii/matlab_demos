@@ -1,0 +1,16 @@
+function example_header_code(exampleFig,cutoff,animals,useISI,areas,excludeSuppressed,normalize,paperSessions)
+%Written by Xing 01/10/13
+%Generate figure for methods paper, comparing AUROC and COBAM methods.
+%Read activity levels for all trials (pooled across sessions) for each
+%channel, calculate individual channel AUROC and COBAM values.
+%Rank channels in order of AUROC values, and then calculate cumulative
+%AUROC/COBAM values when data from increasing numbers of channels included.
+
+%Set useISI to 1: based on pre-test vs test, not on sample vs test.
+%Set useISI to 0: sample vs test.
+
+%Set exampleFig to 0 to plot ROC curves for new and old methods, set to 1
+%to only plot example figures of distributions of stimulus-evoked activity
+%and condition-dependent ROC curves.
+%Set excludeSuppressed to 1 to exclude channels with stimulus-evoked
+%suppression, i.e. blanco 13, 24, 42 and jack 49.
