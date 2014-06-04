@@ -9,7 +9,7 @@ var3=[];
 overwriteMatFile=1;
 
 %Set directory:
-rootFolder='F';
+rootFolder='C';
 if useISI==0
     subFolder='new_vs_old_individualchannels';
 elseif useISI==1
@@ -29,7 +29,7 @@ end
 if paperSessions
     subFolder=[subFolder,'_paperSessions'];
 end
-folderPathName=fullfile(rootFolder,'PL',analysisType,animal,subFolder);
+folderPathName=fullfile(rootFolder,'PL',analysisType,animal,subFolder);%insert a '\'
 
 %Check that dir exists, create it if not:
 if ~exist(folderpathname,'dir')
