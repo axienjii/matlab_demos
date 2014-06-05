@@ -18,12 +18,12 @@ end
 
 
 %Versus setting them manually & constantly commenting or uncommenting lines:
-% animal='blanco';
-animal='jack';
+animal='blanco';
+% animal='jack';
 
 % area='v4_1';
-% area='v4_2';
+area='v4_2';
 % area='v1_1';
-area='v1_2';
+% area='v1_2';
 
 doSomethingHere=1;

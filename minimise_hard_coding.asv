@@ -1,4 +1,4 @@
-function minimise_hard_coding
+function use_cell_arrays
 %Written by Xing 29/05/14
 %Use variables and minimise hard coding.
 

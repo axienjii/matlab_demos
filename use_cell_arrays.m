@@ -1,0 +1,63 @@
+function use_cell_arrays
+%Written by Xing 04/06/14
+%Use curly braces to define cells.
+
+%Example 1, using names of test subjects
+
+%You can concatenate items of the same length:
+animals=['andrew';'bessie']%returns a 2-by-6 char array
+
+%If you try to concatenate items of different lengths, an error is returned:
+animals=['andrew';'bess']
+
+%Specify names of animals within a cell, to accommodate differing name lengths:
+%first name is 6 letter long, while second name is 4 letters long
+animals=[{'blanco'} {'jack'}]%returns a 1-by-2 cell araray
+
+
+
+
+
+
+
+%Example 2, collecting different numbers of trials per condition
+
+rawActivity1=[1 2 3 4 5];%5 trials for condition 1
+rawActivity2=[1 2 3 4 5 6 7 8 9 10];%10 trials for condition 2
+
+%If you want to combine values across conditions into a single array:
+allActivity=[rawActivity1;rawActivity2]%returns an error as the lengths of the two raw activity arrays are unequal
+
+
+
+%Instead, use a cell structure:
+allActivity=[{rawActivity1};{rawActivity2}]%returns a 1-by-2 cell array
+
+%To retrieve data from each condition:
+allActivity{1}
+allActivity{2}
+
+%To index an element within the cell:
+allActivity{2}(10)
+
+
+%Or (a commonly used but clunkier solution that can lead to errors quite easily):
+allActivity=zeros(2,20)-1;%create an arbitrarily large 2-by-20 matrix, setting all the values to '-1'
+allActivity(1,1:length(rawActivity1))=rawActivity1;%writes values from rawActivity1 into first row
+allActivity(2,1:length(rawActivity2))=rawActivity2%writes values from rawActivity2 into second row
+%The 'excess' space is taken up by negative values, i.e. '-1', which
+%differentiates them from the 'real' data- as long as your real data never
+%take on the value of -1. 
+
+%Values have to be read out from 'allActivity' at some point in the analyses.
+
+%Somestimes people store a separate array of data, keeping a tally of how
+%many trials occurred per condition:
+tallyTrials=[length(rawActivity1);length(rawActivity2)]
+%That way, one can access just the elements that contain proper data:
+allActivity(1,1:tallyTrials(1))%condition 1
+allActivity(2,1:tallyTrials(2))%condition 2
+
+%Or, one could check which values are NOT negative:
+allActivity(1,allActivity(1,:)~=-1)%condition 1
+allActivity(2,allActivity(2,:)~=-1)%condition 2
