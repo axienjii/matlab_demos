@@ -45,7 +45,7 @@ mu2=12;
 sigma2=5;
 x1=normrnd(mu1,sigma1,1,100);%generate 100 values that form the first distribution
 x2=normrnd(mu2,sigma2,1,100);%generate 100 values that form the second distribution
-[h p ci stats]=ttest(x1,x2)%paired t-test
+[h p ci stats]=ttest(x1,x2,'right')%paired t-test
 [h p ci stats]=ttest2(x1,x2)%unpaired t-test
 
 %Report the t statistic, the df (in brackets), and the p-value
@@ -364,11 +364,11 @@ hold on
 %   obtained by performing robust regression to estimate the linear model
 %   Y = Xb.  X is an n-by-p matrix of predictor variables, and Y is an
 %   n-by-1 vector of observations.
-[brob stats]=robustfit(x,y)
+[brob stats]=robustfit(x,y)%brob(1) is the intercept of the best-fit line; brob(2) is the slope
 stats.p%returns p-values for each coefficient in the model, indicating 
-%whether a given coefficient differes significantly from zero. Useful for 
-%checking whether the slope of a regression line is significantly different 
-%from zero.
+%whether a given coefficient differes significantly from zero. 
+stats.p(2)%Good for checking whether the slope of a regression line is 
+%significantly different from zero.
 plot(x,brob(1)+brob(2)*x,'k','LineWidth',2)
 %To perform a multiple linear regression using least squares:
 %   B = REGRESS(Y,X) returns the vector B of regression coefficients in the
@@ -387,7 +387,7 @@ plot(x,bls(1)+bls(2)*x,'b','LineWidth',2);
 %squares approach, whereas robustfit remains unaffected.
 
 
-%Alternatively:
+%Alternatively, use the fitlm function:
 load hospital
 y = hospital.BloodPressure(:,1);
 X = double(hospital(:,2:5));

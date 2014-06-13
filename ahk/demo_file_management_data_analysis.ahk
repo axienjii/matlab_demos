@@ -167,13 +167,13 @@ Send, {Tab}
 Sleep, 500
 Send, {Tab}
 Sleep, 1000
-Send, 120
+Send, 50
 Sleep, 500
 Send, {Tab}10
 Sleep, 500
-Send, {Tab}600
-Sleep, 500
 Send, {Tab}450
+Sleep, 500
+Send, {Tab}270
 Sleep, 500
 Send, {Enter}
 Sleep, 500
