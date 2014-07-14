@@ -1,6 +1,6 @@
 function parfor_sample_code
 %Written by Xing 11/07/14
-
+%for matlab class
 %Examples of how to use parfor loops, how to split the data processing into
 %distinct stages.
 %Open workers using this command:
