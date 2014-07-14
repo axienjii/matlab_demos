@@ -17,7 +17,6 @@ totalFiles=length(files)*length(days)
 
 parfor processNumber=1:totalFiles
     %process the data here:
-    sprintf()
     dayNumber=floor(processNumber/20)+1;
     fileNumber=mod(processNumber,20)+1;
     sprintf('process number %s, file #%s, day %s',num2str(processNumber),num2str(fileNumber),num2str(dayNumber))

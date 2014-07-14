@@ -9,7 +9,7 @@ animalSessions=[20 10];%20 sessions for animal 1, 10 session for animal 2
 
 for animalIndex=1:2
     %Initialise the variable, 'result':
-%     result=[];
+    result=[];
     for i=1:animalSessions(animalIndex)
         result(i)=i;
     end

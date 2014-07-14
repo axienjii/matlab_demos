@@ -45,7 +45,7 @@ mu2=12;
 sigma2=5;
 x1=normrnd(mu1,sigma1,1,100);%generate 100 values that form the first distribution
 x2=normrnd(mu2,sigma2,1,100);%generate 100 values that form the second distribution
-[h p ci stats]=ttest(x1,x2)%paired t-test
+[h p ci stats]=ttest(x1,x2,[],'both')%paired t-test
 [h p ci stats]=ttest2(x1,x2)%unpaired t-test
 
 %Report the t statistic, the df (in brackets), and the p-value
@@ -316,7 +316,7 @@ sprintf(['X(',num2str(stats.df),',',num2str(length(observedOrientations)),') = '
 [table chi2 p]=crosstab(x1,x2)
 
 
-%11. tests for circular statisticss (e.g. a von Mises distribution)
+%11. tests for circular statistics (e.g. a von Mises distribution)
 
 %Download circstat toolbox and add paths to the folder containing the
 %circstats functions. This demontrates a few handy functions; there are
@@ -354,7 +354,7 @@ figure
 numVals=20;
 x=[1:numVals]';
 y=x+normrnd(1,2,numVals,1);
-%Introduce an outlier to examine how robust fitting compares with ordniary
+%Introduce an outlier to examine how robust fitting compares with ordinary
 %least squares:
 y(numVals)=y(1);
 scatter(x,y,'filled','r');

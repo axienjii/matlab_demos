@@ -159,7 +159,7 @@ Loop, %numLoops%
 		Sleep, 100
 		Send, +{F6}
 		Sleep, 100
-		Click 1242, 85
+		Click 985, 85
 		Sleep, 100
 	}
 

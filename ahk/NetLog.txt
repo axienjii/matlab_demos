@@ -1,8 +1,8 @@
 NetCom Log File Opened - File Name:  H:\GitHub\xing_PL_code\matlab_demos\ahk\NetLog.txt
-Time Opened: (m/d/y)  6/12/2014 at time 18:0:34.211
+Time Opened: (m/d/y)  7/14/2014 at time 13:37:10.414
 NetCom Version 1.22
 
--* NOTICE *-  18:01:57.743 - NetworkNodeClient::ShutdownClient() - Attempting to Shutdown Message Client
--* WARNING *-  18:01:57.744 - NetworkNodeClient::ShutdownClient() - Unable to Close Message Client, Client has not yet been initialized
+-* NOTICE *-  13:38:19.827 - NetworkNodeClient::ShutdownClient() - Attempting to Shutdown Message Client
+-* WARNING *-  13:38:19.828 - NetworkNodeClient::ShutdownClient() - Unable to Close Message Client, Client has not yet been initialized
 Log File Closed - End of File
 

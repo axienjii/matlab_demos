@@ -25,3 +25,6 @@ xlswrite('H:\GitHub\xing_PL_code\matlab_demos\sample_sheet.xlsx', d, 'Temperatur
 
 %Read data from a spreadsheet:
 ndata = xlsread('H:\GitHub\xing_PL_code\matlab_demos\sample_sheet.xlsx', 'Temperatures')
+
+%Read separate variables for numbers, text, etc:
+[num,txt,raw] = xlsread('H:\GitHub\xing_PL_code\matlab_demos\sample_sheet.xlsx', 'Temperatures')%additionally returns the text fields in cell array txt, and the unprocessed data (numbers and text) in cell array raw using any of the input arguments in the previous syntaxes. If xlRange is specified, leading blank rows and columns in the worksheet that precede rows and columns with data are returned in raw. 

@@ -1,9 +1,9 @@
-function use_cell_arrays
+function minimise_hard_coding
 %Written by Xing 29/05/14
 %Use variables and minimise hard coding.
 
 %Set animals and areas 'automatically':
-animals=[{'blanco'} {'jack'}];
+animals=[{'blanco'} {'jack'} {'bret'}];
 areas=[{'v4_1'} {'v4_2'} {'v1_1'} {'v1_2'}];
 for animalInd=1:length(animals)
     animal=animals{animalInd};
@@ -13,7 +13,9 @@ for animalInd=1:length(animals)
     end
 end
 
-
+for animals=1:2
+    
+end
 
 
 
@@ -22,8 +24,8 @@ end
 animal='jack';
 
 % area='v4_1';
-% area='v4_2';
+area='v4_2';
 % area='v1_1';
-area='v1_2';
+% area='v1_2';
 
 doSomethingHere=1;

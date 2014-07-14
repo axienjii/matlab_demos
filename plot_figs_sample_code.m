@@ -20,7 +20,7 @@ yDataPoints=[0,0.0217,0.0632,0.0526,0.119,0.298,0.386,0.569,0.654,0.899,0.978,1,
 
 %plot draw data points in the form of circles:
 if plotDataPoints==1;
-    plot(xDataPoints,yDataPoints,'Marker','o','Color','r','LineStyle','none','MarkerSize',5);
+    plot(xDataPoints,yDataPoints,'Marker','o','Color',[0.5 0.5 0.5],'LineStyle','none','MarkerSize',5);
     hold on%holds the current plot and all axis properties so that subsequent graphing commands add to the existing graph
 end
 

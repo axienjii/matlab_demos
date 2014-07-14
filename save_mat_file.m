@@ -41,5 +41,5 @@ saveMatText=[folderPathName,'\descriptiveMatFileName.mat'];
 
 %Save file:
 if ~exist(saveMatText,'file')||overwriteMatFile==1%check whether it already exists, or can be overwritten
-    save(saveMatText,'var1' 'var2' 'var3')
+    save(saveMatText,'var1','var2','var3')
 end
