@@ -9,7 +9,7 @@ plotDataPoints=1;
 trainingStageLineStyles=[{':'} {'--'} {'-'}];
 
 %colours- red, green, blue:
-lineCols=[{'r'} {[0/256 100/256 0/256]} {'b'}];%speficy shade of green
+lineCols=[{'r'} {[0/256 100/256 0/256]} {'b'}];%specify shade of green
 
 %create figure:
 fig1=figure('Color',[1,1,1],'Units','Normalized','Position',[0.12, 0.08, 0.25, 0.8]);%'Position': left, bottom, width, height
