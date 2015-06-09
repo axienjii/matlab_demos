@@ -11,7 +11,7 @@ animals=['andrew';'bessie']%returns a 2-by-6 char array
 animals=['andrew';'bess']
 
 %Specify names of animals within a cell, to accommodate differing name lengths:
-%first name is 6 letter long, while second name is 4 letters long
+%first name is 6 letters long, while second name is 4 letters long
 animals=[{'blanco'} {'jack'}]%returns a 1-by-2 cell araray
 
 

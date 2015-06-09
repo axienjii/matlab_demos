@@ -2,9 +2,9 @@ function handling_errors
 %Catch and throw errors as they occur, and allow code to keep running,
 %rather than getting stuck at the place where an error first occurred.
 
-verbose=0;
+verbose=1;
 sessionsList=1:10;%process data from ten sessions
-data={1 2 [] 4 5 6 7 8 9 10}%missing data for the 4th session 
+data={1 2 [] 4 5 6 7 8 9 10}%missing data for the 3rd session 
 
 errorMessages=[];%keep a list of any errors
 for sessionCount=1:length(sessionsList)
