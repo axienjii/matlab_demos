@@ -115,3 +115,5 @@ circular stats, goodness of fit.
 
 -How to export figures, choose image formats, use transparency, create publication-quality figures, use a standard template 
 of image settings, edit in Adobe Illustrator.
+
+To get started, refer to the document titled,'Matlab tips 050417.pdf'
